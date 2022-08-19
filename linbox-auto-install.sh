@@ -453,16 +453,16 @@ if [ ! \( -x autogen.sh -o -x configure \) ] ; then
 	    echo -ne " already there!\n"| tee -a linbox-auto-install.log
 	    echo -ne "${BEG}fetching md5sum" | tee -a linbox-auto-install.log;
 	    [ -f linbox-${STABLE_FFLAS}.tar.gz.${MD5SUFF} ] && rm linbox-${STABLE_FFLAS}.tar.gz.${MD5SUFF} ;
-	    wget --no-check-certificate https://github.com/linbox-team/linbox/releases/download/v${STABLE_LB}/linbox-${STABLE_LB}.tar.gz.${MD5SUFF} >/dev/null 2>&1 || die
+	    wget --no-check-certificate https://github.com/pierreeliseeflory/linbox/releases/download/v${STABLE_LB}/linbox-${STABLE_LB}.tar.gz.${MD5SUFF} >/dev/null 2>&1 || die
 	    [ -f linbox-${STABLE_LB}.tar.gz.${MD5SUFF} ] || die
 	    cool| tee -a linbox-auto-install.log
 	    echo -ne "${BEG}"
 	    md5sum -c linbox-${STABLE_LB}.tar.gz.${MD5SUFF} || die
 	else
-	    wget https://github.com/linbox-team/linbox/releases/download/v${STABLE_LB}/linbox-${STABLE_LB}.tar.gz >/dev/null 2>&1 || die
+	    wget https://github.com/pierreeliseeflory/linbox/releases/download/v${STABLE_LB}/linbox-${STABLE_LB}.tar.gz >/dev/null 2>&1 || die
 	    [ -f linbox-${STABLE_LB}.tar.gz ] &&  cool || die
 	    echo -ne "${BEG}fetching md5sum" | tee -a linbox-auto-install.log;
-	    wget --no-check-certificate https://github.com/linbox-team/linbox/releases/download/v${STABLE_LB}/linbox-${STABLE_LB}.tar.gz.${MD5SUFF} >/dev/null 2>&1 || die
+	    wget --no-check-certificate https://github.com/pierreeliseeflory/linbox/releases/download/v${STABLE_LB}/linbox-${STABLE_LB}.tar.gz.${MD5SUFF} >/dev/null 2>&1 || die
 	    cool| tee -a linbox-auto-install.log
 	    echo -ne "${BEG}"
 	    md5sum -c linbox-${STABLE_LB}.tar.gz.${MD5SUFF} || die
@@ -474,7 +474,7 @@ if [ ! \( -x autogen.sh -o -x configure \) ] ; then
 	cd linbox-${STABLE_LB} &&  cool   || die
     else
 	OK=0 ;
-	git clone --depth 1 https://github.com/linbox-team/linbox.git 2>&1 >/dev/null && OK=1
+	git clone --depth 1 https://github.com/pierreeliseeflory/linbox.git 2>&1 >/dev/null && OK=1
 	[ "$OK" = "1" ] &&  cool | tee -a linbox-auto-install.log || die
 	cd linbox &&  cool   || die
     fi
