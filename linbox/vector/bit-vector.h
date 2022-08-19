@@ -38,7 +38,7 @@ namespace LinBox
 
 	/** Binary constant defined both for 32 and 64 bits
 	*/
-#if (SIZEOF_LONG == 4)
+#if (__SIZEOF_LONG__ == 4)
 #define __LINBOX_BITSOF_LONG 32
 #define __LINBOX_BITSOF_LONG_MUN 31
 #define __LINBOX_LOGOF_SIZE 5
@@ -53,7 +53,7 @@ namespace LinBox
 		t &= 0xf;
 		return bool( (0x6996 >> t) & 0x1);
 	}
-#elif (SIZEOF_LONG == 8)
+#elif (__SIZEOF_LONG__ == 8)
 #define __LINBOX_BITSOF_LONG 64
 #define __LINBOX_BITSOF_LONG_MUN 63
 #define __LINBOX_LOGOF_SIZE 6
@@ -70,7 +70,7 @@ namespace LinBox
 		return bool( (0x6996 >> t) & 0x1);
 	}
 #else
-#pragma message "error SIZEOF_LONG not defined !"
+#pragma message "error __SIZEOF_LONG__ not defined !"
 #endif
  
 	/** A vector of boolean 0-1 values, stored compactly to save space.
