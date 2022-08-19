@@ -596,6 +596,7 @@ namespace LinBox
 } // end of LinBox namespace
 
 //#if 0
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 # include "linbox/algorithms/hybrid-det.h"
 # define SOLUTION_CRA_DET lif_cra_det

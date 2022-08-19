@@ -1208,6 +1208,7 @@ namespace LinBox
 		} // end of getRationalET
 
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 		/*!
 		 * Rational reconstruction using Lattice base reduction

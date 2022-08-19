@@ -211,6 +211,7 @@ namespace LinBox {
 
 } // namespace LinBox
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 #include "linbox/ring/ntl.h"
 #include "NTL/ZZXFactoring.h"

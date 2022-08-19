@@ -33,6 +33,7 @@
 #include <givaro/modular.h>
 #include <givaro/zring.h>
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 #include "linbox/ring/ntl/ntl-zz.h"
 #endif //__LINBOX_HAVE_NTL
@@ -329,6 +330,7 @@ namespace LinBox
 } // namespace LinBox
 
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 namespace LinBox
 {

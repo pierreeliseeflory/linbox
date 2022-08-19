@@ -127,6 +127,7 @@ int main (int argc, char **argv)
 		printPolynomial (clog, ZZ, c_A) << endl;
 		cout << tim << endl;
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 		clog << "Do you want a factorization (y/n) ? ";
 		char tmp;

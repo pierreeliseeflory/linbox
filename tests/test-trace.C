@@ -64,6 +64,7 @@ int main (int argc, char **argv)
 
 	commentator().start("Trace test suite", "Trace");
 	commentator().getMessageClass (INTERNAL_DESCRIPTION).setMaxDepth (3);
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 	ostream& report = commentator().report();
 #endif
@@ -91,6 +92,7 @@ int main (int argc, char **argv)
 	trace(t3, A, G );
 	if (! F.areEqual(t3, t) ) pass = false;
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 // Toeplitz matrix
 

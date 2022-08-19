@@ -36,6 +36,7 @@
 #include "linbox/linbox-config.h"
 #include "linbox/blackbox/blackbox-interface.h"
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 #include "linbox/ring/ntl.h"
 #endif
@@ -146,6 +147,7 @@ namespace LinBox
 	 * The apply is a call to polynomial multiplication and if the poly ring is
 	 * FFT based for large n, apply will run in O(n lg(n)) time.
 	 */
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 	template< class _CField, class _PRing = NTL_ZZ_pX >
 	#else

@@ -54,7 +54,8 @@
 #include "linbox/ring/modular.h"
 #include <givaro/modular-balanced.h>
 
-// #ifdef __LINBOX_HAVE_NTL
+// #define __LINBOX_HAVE_NTL
+#ifdef __LINBOX_HAVE_NTL
 // #include "linbox/ring/ntl.h"
 // #endif
 #include "linbox/matrix/dense-matrix.h"
@@ -201,7 +202,8 @@ int main(int argc, char **argv)
     //#pragma message "#warning Givaro::Modular<bool> is not working"
 	//pass &= launch_tests(F7,n,iterations);
 
-// #ifdef __LINBOX_HAVE_NTL
+// #define __LINBOX_HAVE_NTL
+#ifdef __LINBOX_HAVE_NTL
 // #pragma message "#warning NTL_ZZp is not working at all"
 //     NTL::ZZ_p::init(NTL::to_ZZ((unsigned long)(uint64_t)q));
 // 	NTL_ZZ_p F8;

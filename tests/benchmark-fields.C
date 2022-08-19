@@ -31,6 +31,7 @@
 #include "linbox/util/timer.h"
 // #include "linbox/field/givaro-gfq.h"
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 #include "linbox/ring/ntl.h"
 #include "linbox/ring/pid-ntl-lzz_p.h"
@@ -362,6 +363,7 @@ int main(int argc, char** argv)
 
 	doTest< ModularCrooked<double> >( "ModularCrooked<double>", prime, exp, iterations, fulltest );
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 	doTest< NTL_zz_p >( "NTL_zz_p", prime, exp, iterations, fulltest );
 	doTest< NTL_PID_zz_p >( "NTL_PID_zz_p", prime, exp, iterations, fulltest );

@@ -46,6 +46,7 @@
 #include "linbox/field/archetype.h"
 #include "linbox/ring/modular.h"
 //#include "linbox/field/givaro.h"
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 #include "linbox/ring/ntl.h"
 #endif
@@ -220,6 +221,7 @@ int main (int argc, char **argv)
 		END_OF_ARGUMENTS
 	};
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 //        typedef Givaro::ZRing<NTL::zz_p> Field;
         typedef NTL_zz_p Field;

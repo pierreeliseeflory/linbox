@@ -41,6 +41,7 @@
 #endif
 
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 #include <NTL/LLL.h>
 #endif
@@ -62,6 +63,7 @@ namespace LinBox
 	class latticeMethod {
 	public:
 		struct genericMethod {};
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 		/*! NTL_LLL.
 		 * This is NTL's LLL

@@ -36,6 +36,7 @@
 #include <iostream>
 
 #include "linbox/blackbox/toeplitz.h"
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 #include "linbox/ring/ntl.h"
 #endif
@@ -66,6 +67,7 @@ int main(int argc, char* argv[])
 
 	ostream& report = commentator().report();
 	bool pass = true;
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 	srand((unsigned)time(0));
 	PrimeIterator<IteratorCategories::HeuristicTag> rp(FieldTraits<NTL_zz_p>::bestBitSize());

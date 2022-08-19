@@ -30,6 +30,7 @@
 #include "linbox/field/gmp-rational.h"
 #include "linbox/field/givaro.h"
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 #include "linbox/ring/ntl.h"
 #endif
@@ -54,6 +55,7 @@ typedef DL3 linbox_domain_list;
 typedef DL6 linbox_domain_list;
 #endif
 
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 typedef LinBoxTypelist < LinBox::NTL_ZZ_p, LinBoxDumbType> DN1;
 typedef LinBoxTypelist < LinBox::NTL_zz_p, DN1> DN2;
@@ -101,6 +103,7 @@ void UpdateDomain(){
 	linbox_domain.add("linbox_field_64"       , constructDomain<LinBox::Givaro::Modular<int64_t> >);
 	linbox_domain.add("linbox_field_mp"       , constructDomain<Givaro::Modular<LinBox::integer> >);
 #endif
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 	linbox_domain.add("ntl_field_ZZ_p"      , constructDomain<LinBox::NTL_ZZ_p>);
 #ifndef __LINBOX_MINIMIZE_DOMAIN

@@ -36,6 +36,7 @@
 /*  Interface to NTL LLL */
 namespace LinBox
 {
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 
 	//! @todo we should use mat_ZZ here instead of BlasMatrix<Ring>
@@ -179,6 +180,7 @@ namespace LinBox
 /*  Interface to NTL BKZ */
 namespace LinBox
 {
+#define __LINBOX_HAVE_NTL
 #ifdef __LINBOX_HAVE_NTL
 
 	//! @todo we should use mat_ZZ here instead of BlasMatrix<Ring>
