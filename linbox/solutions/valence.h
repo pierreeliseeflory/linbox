@@ -143,7 +143,7 @@ namespace LinBox
 						    const MyMethod                     &M)
 	{
 		commentator().start ("Integer Valence", "Ivalence");
-#if __LINBOX_SIZEOF_LONG == 8
+#if SIZEOF_LONG == 8
 		typedef Givaro::Modular<int64_t> Field;
 #else
 		typedef Givaro::ModularBalanced<double> Field;

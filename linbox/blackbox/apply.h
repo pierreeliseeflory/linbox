@@ -1130,7 +1130,7 @@ namespace LinBox
 					if (tmp > 0) {
 
 						//if (sizeof(long)==8 ) {
-#if __LINBOX_SIZEOF_LONG  == 8
+#if SIZEOF_LONG  == 8
 
 						// specialization for 64bits integer limbs
 						for (j=0; j<tmpsize-1; j++) {
@@ -1175,7 +1175,7 @@ namespace LinBox
 					}
 					else {
 						++tmp;
-#if __LINBOX_SIZEOF_LONG == 8
+#if SIZEOF_LONG == 8
 						// specialization for 64bits integer limbs
 						for (j=0; j<tmpsize-1; j++) {
 							*pdbl        = double(0xFFFF ^ ( tmp[j]        & 0xFFFF));
@@ -1273,7 +1273,7 @@ namespace LinBox
 					if (tmp > 0) {
 
 
-#if __LINBOX_SIZEOF_LONG == 8
+#if SIZEOF_LONG == 8
 						// specialization for 64bits integer limbs
 						for (j=0; j<tmpsize-1; j++) {
 							*pdbl     = double( tmp[j]        & 0xFFFF);
@@ -1314,7 +1314,7 @@ namespace LinBox
 					}
 					else {
 						++tmp;
-#if __LINBOX_SIZEOF_LONG == 8
+#if SIZEOF_LONG == 8
 						// specialization for 64bits integer limbs
 						for (j=0; j<tmpsize-1; j++) {
 							*pdbl     = (double) (0xFFFF ^ ( tmp[j]        & 0xFFFF));
@@ -1413,7 +1413,7 @@ namespace LinBox
 					if (tmp > 0) {
 
 
-#if __LINBOX_SIZEOF_LONG == 8
+#if SIZEOF_LONG == 8
 						// specialization for 64bits integer limbs
 						size_t tmpbitsize = tmp.bitsize();
 						for (j=0; j<tmpsize-1; j++) {
@@ -1435,7 +1435,7 @@ namespace LinBox
 					}
 					else {
 						++tmp;
-#if __LINBOX_SIZEOF_LONG == 8
+#if SIZEOF_LONG == 8
 						// specialization for 64bits integer limbs
 						size_t tmpbitsize = tmp.bitsize();
 						for (j=0; j<tmpsize; j++) {
